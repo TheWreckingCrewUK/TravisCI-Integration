@@ -33,7 +33,7 @@ _returnSurfaceASL = AGLToASL _positionAGL; \
 } forEach _surfaces; \
 if(_canFloat && (_returnSurfaceASL select 2) < 0) then { \
 	_returnSurfaceASL set [2,0]; \
-}; \
+};
 
 #define SA_Find_Surface_ASL_Under_Model(_object,_modelOffset,_returnSurfaceASL,_canFloat) \
 SA_Find_Surface_ASL_Under_Position(_object, (_object modelToWorldVisual _modelOffset), _returnSurfaceASL,_canFloat);
