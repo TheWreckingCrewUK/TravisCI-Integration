@@ -29,9 +29,9 @@ def analyze(filename, writer=sys.stdout):
             for e in exceptions:
                 if (e.message.startswith("error")):
                     errors += 1
+                    writer.write('    [%d,%d]:%s\n' % (e.position[0], e.position[1] - 1, e.message))
                 else:
                     warnings += 1
-                writer.write('    [%d,%d]:%s\n' % (e.position[0], e.position[1] - 1, e.message))
     
     return warnings, errors
          
