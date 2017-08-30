@@ -1,7 +1,7 @@
 class CfgPatches
 {
 	class twc_man
-	{
+	
 		units[]={};
 		weapons[]={};
 		requiredVersion=0.1;
