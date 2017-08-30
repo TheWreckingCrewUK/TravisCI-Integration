@@ -48,7 +48,8 @@ def main():
  
     for root, dirnames, filenames in os.walk('../' + args.module):
         for filename in fnmatch.filter(filenames, '*.sqf'):
-            sqf_list.append(os.path.join(root, filename))
+            if 'fn_advancedTowingInit.sqf' not in filename:
+                sqf_list.append(os.path.join(root, filename))
         
     for filename in sqf_list:
         warnings, errors = analyze(filename)
